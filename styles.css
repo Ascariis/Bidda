@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap");
+
+/* Light mode */
+:root {
+  --body-bg: #FFFFFF;
+  --body-color: #000000;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+      --body-bg: #000000;
+      --body-color: #FFFFFF;
+      --isDark: invert(100%);
+  }
+}
+
+body {
+  background: var(--body-bg);
+  color: var(--body-color);
+}
+
+.material-symbols-outlined {
+  scale: 400%;
+  color: blue;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 200,
+  'opsz' 48
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  font-size: 18px;
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 10%;
+}
+
+.decimino {
+  clip-path: circle();
+  max-width: 140px;
+  width: 140px;
+  min-width: 140px;
+  height: 140px;
+  object-fit: cover;
+}
+
+.decimino:hover {
+  filter: grayscale(60%);
+  transition: 0.3s ease;
+}
+
+.albumCover {
+  clip-path: polygon(4);
+  max-width: 450px;
+  width: 450px;
+  min-width: 450px;
+  height: 450px;
+  object-fit: cover;
+}
+
+footer {
+  margin-top: 15px;
+  display: flex;
+  font-size: 18px;
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  align-items: center;
+  justify-content: space-between;
+  padding: 90px 0px;
+  background-color: var(--body-color);
+  color: var(--body-bg);
+}
+
+.sborra {
+  padding: 0px 10%;
+  color: var(--body-color);
+}
+
+.links {
+  display: inline-block;
+  list-style: none;
+  padding: 0 15px;
+}
+
+.links li,
+a {
+  text-decoration: none;
+  color: var(--body-color);
+}
+
+.links a:hover,
+i:hover {
+  color: blue;
+  transition: cubic-bezier();
+}
+
+.decimese {
+  font-family: "Syne";
+  color: black;
+  font-weight: 700;
+  font-size: 110px;
+}
+
+p {
+  font-family: "Syne";
+  font-weight: 700;
+  font-size: 110px;
+}
+
+.decimese a:hover {
+  color: blue;
+  transition: ease-in-out;
+  transition-duration: 0.3s;
+  cursor: default;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: blue;
+}
+
+::selection {
+  color: white;
+  background: blue;
+}
+
+.logos {
+  max-width: 5%;
+  max-height: 5%;
+  filter: var(--isDark);
+}
+
+
+
+.albumCover a:hover {
+  filter: grayscale();
+  transition: 0.3s ease-in-out;
+}
