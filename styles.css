@@ -102,7 +102,7 @@ a {
 .links a:hover,
 i:hover {
   color: blue;
-  transition: cubic-bezier();
+  transition: 0.3s ease;
 }
 
 .decimese {
@@ -142,7 +142,33 @@ p {
   filter: var(--isDark);
 }
 
+.culone {
+  margin: 10px;
+  scale: 100%;
+  font-family: "Syne";
+  font-weight: 700;
+  background-color: var(--body-color);
+  color: var(--body-bg);
+  padding: 15px 20px;
+  stroke: none;
+  border: none;
+  font-size: 24px;
+  border-radius: 1px;
+}
 
+.culone:hover {
+  font-family: "Syne";
+  font-weight: 700;
+  background-color: var(--body-color);
+  border: none;
+  color: var(--body-bg);
+  padding: 15px 20px;
+  font-size: 24px;
+  /*filter: invert();*/
+  opacity: 80%;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
 
 .albumCover a:hover {
   filter: grayscale();
