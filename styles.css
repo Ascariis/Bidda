@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap");
+@import url('https://fonts.cdnfonts.com/css/satoshi');
 
 /* Light mode */
 :root {
@@ -39,7 +39,7 @@ body {
 .navbar {
   display: flex;
   font-size: 18px;
-  font-family: "Syne", sans-serif;
+  font-family: "Satoshi", sans-serif;
   font-weight: 700;
   align-items: center;
   justify-content: space-between;
@@ -73,7 +73,7 @@ footer {
   margin-top: 15px;
   display: flex;
   font-size: 18px;
-  font-family: "Syne", sans-serif;
+  font-family: "Satoshi", sans-serif;
   font-weight: 700;
   align-items: center;
   justify-content: space-between;
@@ -106,14 +106,14 @@ i:hover {
 }
 
 .decimese {
-  font-family: "Syne";
+  font-family: "Satoshi";
   color: black;
   font-weight: 700;
   font-size: 110px;
 }
 
 p {
-  font-family: "Syne";
+  font-family: "Satoshi";
   font-weight: 700;
   font-size: 110px;
 }
@@ -145,7 +145,7 @@ p {
 .culone {
   margin: 10px;
   scale: 100%;
-  font-family: "Syne";
+  font-family: "Satoshi";
   font-weight: 700;
   background-color: var(--body-color);
   color: var(--body-bg);
@@ -157,7 +157,7 @@ p {
 }
 
 .culone:hover {
-  font-family: "Syne";
+  font-family: "Satoshi";
   font-weight: 700;
   background-color: var(--body-color);
   border: none;
