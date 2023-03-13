@@ -2,15 +2,15 @@
 
 /* Light mode */
 :root {
-  --body-bg: #FFFFFF;
-  --body-color: #000000;
+  --body-bg: #C0E0DE;
+  --body-color: #162521;
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-      --body-bg: #000000;
-      --body-color: #FFFFFF;
+      --body-bg: #162521;
+      --body-color: #C0E0DE;
       --isDark: invert(100%);
   }
 }
