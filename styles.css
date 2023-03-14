@@ -1,33 +1,29 @@
-@import url('https://fonts.cdnfonts.com/css/satoshi');
+@import url("https://fonts.cdnfonts.com/css/satoshi");
 
 /* Light mode */
 :root {
-  --body-bg: #C0E0DE;
-  --body-color: #162521;
+  --body-bg: #E2FCFC;
+  --body-color: #0e1010;
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-      --body-bg: #162521;
-      --body-color: #C0E0DE;
-      --isDark: invert(100%);
+    --body-bg: #0e1010;
+    --body-color: #E2FCFC;
+    --isDark: invert(100%);
   }
 }
 
-body {
-  background: var(--body-bg);
-  color: var(--body-color);
+.dark-mode {
+  --body-bg: #22181c;
+  --body-color: #f6e8ea;
+  --isDark: filter: invert(95%) sepia(12%) saturate(567%) hue-rotate(157deg) brightness(104%) contrast(98%);;
 }
 
-.material-symbols-outlined {
-  scale: 400%;
-  color: blue;
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 700,
-  'GRAD' 200,
-  'opsz' 48
+body {
+  background-color: var(--body-bg);
+  color: var(--body-color);
 }
 
 * {
@@ -40,10 +36,10 @@ body {
   display: flex;
   font-size: 18px;
   font-family: "Satoshi", sans-serif;
-  font-weight: 700;
+  font-weight: 900;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 10%;
+  padding: 30px 7.5%;
 }
 
 .decimino {
@@ -62,11 +58,48 @@ body {
 
 .albumCover {
   clip-path: polygon(4);
-  max-width: 450px;
-  width: 450px;
-  min-width: 450px;
-  height: 450px;
+  width: clamp(100% - 6pt, 10vw, 240px);
+  height: clamp(240px, 10vw, 240px);
   object-fit: cover;
+  border-radius: 16px;
+  margin: 6pt;
+}
+
+.piede {
+  opacity: 90%;
+  font-weight: 800;
+  font-size: clamp(8px, 8vw, 16px);
+  color: var(--body-bg);
+}
+
+main {
+  flex-grow: 1;
+}
+
+main > article {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+}
+
+main > article > .article-section {
+  height: 100%;
+  border: 1px solid var(--body-bg);
+}
+
+.albumTitle {
+  padding-top: 10px;
+  padding-left: 16px;
+  font-weight: 900;
+  font-style: oblique;
+  font-size: clamp(8px, 8vw, 48px);
+}
+
+.albumInfo {
+  opacity: 80%;
+  font-weight: 800;
+  font-size: clamp(8px, 8vw, 18px);
+  padding-left: 16px;
 }
 
 footer {
@@ -75,15 +108,15 @@ footer {
   font-size: 18px;
   font-family: "Satoshi", sans-serif;
   font-weight: 700;
+  padding: 30px 7.5%;
   align-items: center;
   justify-content: space-between;
-  padding: 90px 0px;
   background-color: var(--body-color);
   color: var(--body-bg);
 }
 
 .sborra {
-  padding: 0px 10%;
+  padding: 0px 7.5%;
   color: var(--body-color);
 }
 
@@ -101,44 +134,53 @@ a {
 
 .links a:hover,
 i:hover {
-  color: blue;
   transition: 0.3s ease;
 }
 
-.decimese {
+nav li:hover {
+  scale: 120%;
+  transition: 0.2s ease;
+}
+
+nav li::after {
+  scale: 100%;
+  transition: 0.2s ease-in-out;
+}
+
+.decimese a {
   font-family: "Satoshi";
-  color: black;
   font-weight: 700;
-  font-size: 110px;
+  font-size: clamp(45px, 8vw, 110px);
 }
 
 p {
   font-family: "Satoshi";
   font-weight: 700;
-  font-size: 110px;
+  font-size: clamp(60px, 8vw, 110px);
 }
 
 .decimese a:hover {
-  color: blue;
+  color: #ef626c;
   transition: ease-in-out;
-  transition-duration: 0.3s;
+  transition-duration: 0.3s ease;
   cursor: default;
 }
 
+
+/*SELECTION COLORS*/
 ::-moz-selection {
   /* Code for Firefox */
-  color: white;
-  background: blue;
+  color: var(--body-bg);;
+  background: var(--body-color);
 }
 
 ::selection {
-  color: white;
-  background: blue;
+  color: var(--body-bg);;
+  background: var(--body-color);
 }
 
 .logos {
-  max-width: 5%;
-  max-height: 5%;
+  max-width: clamp(32px, 10vw, 80px);
   filter: var(--isDark);
 }
 
@@ -153,7 +195,7 @@ p {
   stroke: none;
   border: none;
   font-size: 24px;
-  border-radius: 1px;
+  border-radius: 16px;
 }
 
 .culone:hover {
@@ -170,7 +212,24 @@ p {
   cursor: pointer;
 }
 
-.albumCover a:hover {
-  filter: grayscale();
-  transition: 0.3s ease-in-out;
+.culone:active {
+  scale: 90%;
+  transition: 0.3s ease;
+}
+
+.albumCover:hover {
+  opacity: 90%;
+  transition: 0.3s ease;
+}
+
+.albumCover:active {
+  scale: 90%;
+  transition: 0.3s ease;
+}
+
+@media (max-width: 780px) {
+  nav {
+    visibility: hidden;
+  }
+
 }
