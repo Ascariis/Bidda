@@ -121,7 +121,7 @@ footer {
 }
 
 .links {
-  transition: 0.3s ease
+  transition: 0.3s ease;
   display: inline-block;
   list-style: none;
   padding: 0 15px;
