@@ -139,7 +139,7 @@ i:hover {
 }
 
 nav li:hover {
-  scale: 120%;
+  transform: scale(1.2);
   transition: 0.2s ease;
 }
 
@@ -161,7 +161,7 @@ p {
 }
 
 .decimese a:hover {
-  color: #ef626c;
+  transform: scale(1.2);
   transition: ease-in-out;
   transition-duration: 0.3s ease;
   cursor: default;
