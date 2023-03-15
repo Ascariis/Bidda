@@ -11,7 +11,7 @@
   :root {
     --body-bg: #0e1010;
     --body-color: #E2FCFC;
-    --isDark: invert(100%);
+    --isDark: invert(99%) sepia(98%) saturate(268%) hue-rotate(131deg) brightness(104%) contrast(98%);
   }
 }
 
@@ -22,7 +22,7 @@
 }
 
 body {
-  background-color: var(--body-bg);
+  background-color: var(--body-bg); 
   color: var(--body-color);
 }
 
@@ -33,6 +33,9 @@ body {
 }
 
 .navbar {
+
+  width: 100%;
+  filter: blur();
   display: flex;
   font-size: 18px;
   font-family: "Satoshi", sans-serif;
@@ -183,6 +186,7 @@ p {
 .logos {
   max-width: clamp(32px, 10vw, 80px);
   filter: var(--isDark);
+
 }
 
 .culone {
@@ -232,5 +236,5 @@ p {
   nav {
     visibility: hidden;
   }
-
+  
 }
